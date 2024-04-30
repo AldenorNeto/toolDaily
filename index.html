@@ -17,7 +17,7 @@
 
       li {
         font-size: 1.2em;
-        margin: 1.2rem 0;
+        margin-bottom: 10px;
       }
 
       .container {
@@ -33,7 +33,6 @@
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
-
       .card h2 {
         margin-top: 0;
       }
@@ -46,35 +45,48 @@
         try {
           const resposta = await fetch(`agenda.json`);
           const data = await resposta.json();
-          // Function to generate cards
-          function generateCards(data) {
-            const container = document.getElementById("scheduleContainer");
-            container.innerHTML = ""; // Clear previous content
-
-            data.forEach((course) => {
-              const courseDiv = document.createElement("div");
-              courseDiv.classList.add("card");
-
-              const title = document.createElement("h2");
-              title.textContent = course.name;
-              courseDiv.appendChild(title);
-
-              const taskList = document.createElement("ul");
-              course.task.forEach((task) => {
-                const taskItem = document.createElement("li");
-                taskItem.textContent = `${task.title} - ${task.subTitle}`;
-                taskList.appendChild(taskItem);
-              });
-              courseDiv.appendChild(taskList);
-
-              container.appendChild(courseDiv);
-            });
-          }
-
           generateCards(data);
         } catch (erro) {
           console.error("Falha ao carregar o arquivo JSON", erro);
         }
+      }
+
+      function generateCards(data) {
+        const container = document.getElementById("scheduleContainer");
+        container.innerHTML = "";
+
+        data.forEach((course) => {
+          const courseDiv = document.createElement("div");
+          courseDiv.classList.add("card");
+
+          const title = document.createElement("h2");
+          title.textContent = course.name;
+          courseDiv.appendChild(title);
+
+          const taskList = document.createElement("ul");
+          course.task.forEach((task) => {
+            if (isDateValid(task.periodo)) {
+              const taskItem = document.createElement("li");
+              taskItem.innerHTML = `<strong>${task.title}</strong><br>${task.subTitle}<br><em>${task.periodo}</em>`;
+              taskList.appendChild(taskItem);
+            }
+          });
+          courseDiv.appendChild(taskList);
+
+          container.appendChild(courseDiv);
+        });
+      }
+
+      function isDateValid(periodo) {
+        const currentDate = new Date();
+        const endDateString = periodo.split(" - ")[1];
+        const [day, month, year] = endDateString.split("/");
+        const endDate = new Date(
+          parseInt(year, 10) + 2000,
+          parseInt(month, 10) - 1,
+          parseInt(day, 10)
+        );
+        return endDate > currentDate;
       }
 
       carregarDados();
