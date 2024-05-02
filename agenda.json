@@ -1,0 +1,747 @@
+[
+  {
+    "name": "Engenharia de Software",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Engenharia de Software",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta2 - Engenharia de Software",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta3 - Engenharia de Software",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta4 - Engenharia de Software",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Engenharia de Software",
+        "periodo": "19/02/24 - 03/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Engenharia de Software",
+        "periodo": "19/02/24 - 03/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Engenharia de Software",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Engenharia de Software",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Engenharia de Software",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Engenharia de Software",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Engenharia de Software",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Engenharia de Software",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Engenharia de Software",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Engenharia de Software",
+        "periodo": "13/05/24 - 25/05/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Engenharia de Software",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Engenharia de Software",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Engenharia de Software",
+        "periodo": "19/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Algoritmos e Programação Estruturada",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta2 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta3 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta4 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Portfólio",
+        "subTitle": "Relatório de Aula Prática - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 04/05/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 03/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 03/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Algoritmos e Programação Estruturada",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Algoritmos e Programação Estruturada",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Algoritmos e Programação Estruturada",
+        "periodo": "13/05/24 - 25/05/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Algoritmos e Programação Estruturada",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Algoritmos e Programação Estruturada",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Algoritmos e Programação Estruturada",
+        "periodo": "19/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Lógica Computacional",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Lógica Computacional",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta2 - Lógica Computacional",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta3 - Lógica Computacional",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta4 - Lógica Computacional",
+        "periodo": "19/02/24 - 19/02/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Lógica Computacional",
+        "periodo": "19/02/24 - 03/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Lógica Computacional",
+        "periodo": "19/02/24 - 03/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Lógica Computacional",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Lógica Computacional",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Lógica Computacional",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Lógica Computacional",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Lógica Computacional",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Lógica Computacional",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Lógica Computacional",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Lógica Computacional",
+        "periodo": "13/05/24 - 25/05/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Lógica Computacional",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Lógica Computacional",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Lógica Computacional",
+        "periodo": "19/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Projeto de Extensão I",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Projeto de Extensão I - Engenharia de Software",
+        "periodo": "05/02/24 - 05/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta2 - Projeto de Extensão I - Engenharia de Software",
+        "periodo": "05/02/24 - 05/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta3 - Projeto de Extensão I - Engenharia de Software",
+        "periodo": "05/02/24 - 05/02/24"
+      },
+      {
+        "title": "Portfólio",
+        "subTitle": "Portfolio Individual - Projeto de Extensão I - Engenharia de Software",
+        "periodo": "05/02/24 - 04/05/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Projeto de Extensão I - Engenharia de Software",
+        "periodo": "05/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Programação Web",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Programação Web",
+        "periodo": "10/02/24 - 10/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta2 - Programação Web",
+        "periodo": "17/02/24 - 17/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta3 - Programação Web",
+        "periodo": "24/02/24 - 24/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta4 - Programação Web",
+        "periodo": "02/03/24 - 02/03/24"
+      },
+      {
+        "title": "Portfólio",
+        "subTitle": "Relatório de Aula Prática - Programação Web",
+        "periodo": "05/02/24 - 04/05/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Programação Web",
+        "periodo": "05/02/24 - 20/05/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Programação Web",
+        "periodo": "05/02/24 - 27/05/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Programação Web",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Programação Web",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Programação Web",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Programação Web",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      { "title": "Live", "subTitle": "Live", "periodo": "09/05/24 - 09/05/24" },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Programação Web",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Programação Web",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Programação Web",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Programação Web",
+        "periodo": "13/05/24 - 25/05/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Programação Web",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Programação Web",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Programação Web",
+        "periodo": "05/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Bancos de Dados Não Relacionais",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Orientações Sobre Vídeo Aulas",
+        "periodo": "05/02/24 - 05/02/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 29/04/24"
+      },
+      {
+        "title": "Portfólio",
+        "subTitle": "Relatório de Aula Prática - Bancos de Dados Não Relacionais",
+        "periodo": "05/02/24 - 04/05/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 06/05/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 15/06/24"
+      },
+      { "title": "Live", "subTitle": "Live", "periodo": "02/05/24 - 02/05/24" },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Bancos de Dados Não Relacionais",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Bancos de Dados Não Relacionais",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Bancos de Dados Não Relacionais",
+        "periodo": "06/05/24 - 11/05/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Bancos de Dados Não Relacionais",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Bancos de Dados Não Relacionais",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Bancos de Dados Não Relacionais",
+        "periodo": "18/03/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Arquitetura de Software",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Orientações Sobre Vídeo Aulas",
+        "periodo": "05/02/24 - 05/02/24"
+      },
+      { "title": "Live", "subTitle": "Live", "periodo": "28/03/24 - 28/03/24" },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Arquitetura de Software",
+        "periodo": "26/02/24 - 01/04/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Arquitetura de Software",
+        "periodo": "26/02/24 - 08/04/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Arquitetura de Software",
+        "periodo": "26/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Arquitetura de Software",
+        "periodo": "26/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Arquitetura de Software",
+        "periodo": "26/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Arquitetura de Software",
+        "periodo": "26/02/24 - 15/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Arquitetura de Software",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Arquitetura de Software",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Arquitetura de Software",
+        "periodo": "01/04/24 - 06/04/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Arquitetura de Software",
+        "periodo": "26/02/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Arquitetura de Software",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Arquitetura de Software",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Arquitetura de Software",
+        "periodo": "26/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Projeto de Software",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Projeto de Software - A",
+        "periodo": "10/02/24 - 10/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta2 - Projeto de Software - A",
+        "periodo": "17/02/24 - 17/02/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta3 - Projeto de Software - A",
+        "periodo": "24/02/24 - 24/02/24"
+      },
+      { "title": "Live", "subTitle": "Live", "periodo": "27/02/24 - 27/02/24" },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta4 - Projeto de Software - A",
+        "periodo": "02/03/24 - 02/03/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Projeto de Software - A",
+        "periodo": "05/02/24 - 04/03/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Projeto de Software - A",
+        "periodo": "05/02/24 - 11/03/24"
+      },
+      {
+        "title": "Portfólio",
+        "subTitle": "Relatório de Aula Prática - Projeto de Software - A",
+        "periodo": "05/02/24 - 04/05/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Projeto de Software - A",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Projeto de Software - A",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Projeto de Software - A",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Projeto de Software - A",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Projeto de Software - A",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Projeto de Software - A",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Projeto de Software - A",
+        "periodo": "04/03/24 - 09/03/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Projeto de Software - A",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Projeto de Software - A",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Projeto de Software - A",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Projeto de Software - A",
+        "periodo": "05/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Segurança e Auditoria de Sistemas",
+    "task": [
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av1 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 27/05/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av2 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 03/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw2 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 15/06/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "04/05/24 - 04/05/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta2 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "11/05/24 - 11/05/24"
+      },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta3 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "18/05/24 - 18/05/24"
+      },
+      { "title": "Live", "subTitle": "Live", "periodo": "21/05/24 - 21/05/24" },
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta4 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "25/05/24 - 25/05/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 15/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 1º Chamada - Segurança e Auditoria de Sistemas - B",
+        "periodo": "27/05/24 - 01/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Segurança e Auditoria de Sistemas - B",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Segurança e Auditoria de Sistemas - B",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Segurança e Auditoria de Sistemas - B",
+        "periodo": "08/04/24 - 15/06/24"
+      }
+    ]
+  }
+]

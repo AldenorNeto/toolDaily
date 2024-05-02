@@ -78,7 +78,8 @@
       }
 
       function isDateValid(periodo) {
-        const currentDate = new Date();
+        const currentDate = new Date().setHours(0, 0, 0, 0);
+
         const endDateString = periodo.split(" - ")[1];
         const [day, month, year] = endDateString.split("/");
         const endDate = new Date(
@@ -86,7 +87,7 @@
           parseInt(month, 10) - 1,
           parseInt(day, 10)
         );
-        return endDate > currentDate;
+        return endDate >= currentDate;
       }
 
       carregarDados();
