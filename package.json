@@ -4,7 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "up": "start_server.bat"
+    "start": "pm2 start server.js",
+    "stop": "pm2 stop server.js",
+    "delete": "pm2 delete server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "jsdom": "^24.0.0",
+    "pm2": "^5.3.1",
     "uuid": "^9.0.1"
   }
 }
