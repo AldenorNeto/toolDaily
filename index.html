@@ -64,7 +64,6 @@
             new Date(timestanpDate(b.periodo))
         );
 
-        console.log(sortedAllTasks);
         flatTasks.forEach((task) => {
           if (isDateValid(task.periodo)) {
             const taskItem = document.createElement("li");
