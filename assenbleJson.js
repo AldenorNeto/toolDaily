@@ -1,5 +1,6 @@
 const fs = require("fs");
 const jsdom = require("jsdom");
+const { v4: uuidv4 } = require("uuid");
 const { JSDOM } = jsdom;
 
 const name = "Engenharia de Software";
@@ -24,7 +25,8 @@ function processarHTML(inputFile, outputFile) {
       const activitiesContainer = document.querySelector(
         "#js-activities-container"
       );
-      const subElement = activitiesContainer.querySelectorAll(".timeline-panel");
+      const subElement =
+        activitiesContainer.querySelectorAll(".timeline-panel");
       const elementsArray = Array.from(subElement);
 
       const filtrosFinalizado = elementsArray.map((element) => {
@@ -48,7 +50,7 @@ function processarHTML(inputFile, outputFile) {
           .replace("Período:", "")
           .trim();
 
-        return { title, subTitle, periodo };
+        return { title, subTitle, id: uuidv4(), periodo };
       });
 
       const simplifiedHTML = [

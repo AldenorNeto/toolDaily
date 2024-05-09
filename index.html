@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,16 +39,55 @@
     </style>
   </head>
   <body>
+    <ol id="sortedTasks"></ol>
     <div class="container" id="scheduleContainer"></div>
     <script>
       async function carregarDados() {
         try {
           const resposta = await fetch(`agenda.json`);
           const data = await resposta.json();
+          generateSortedTasksList(data);
           generateCards(data);
         } catch (erro) {
           console.error("Falha ao carregar o arquivo JSON", erro);
         }
+      }
+
+      function generateSortedTasksList(data) {
+        const sortedTasksList = document.getElementById("sortedTasks");
+        const flatTasks = data
+          .map((v) => v.task.map((j) => ({ ...j, contentLabel: v.name })))
+          .flat();
+        const sortedAllTasks = flatTasks.sort(
+          (a, b) =>
+            new Date(timestanpDate(a.periodo)) -
+            new Date(timestanpDate(b.periodo))
+        );
+
+        console.log(sortedAllTasks);
+        flatTasks.forEach((task) => {
+          if (isDateValid(task.periodo)) {
+            const taskItem = document.createElement("li");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.value = task.title;
+            checkbox.id = task.id;
+            checkbox.addEventListener("change", () => {
+              if (checkbox.checked) {
+                enviarRequisicao({ task });
+              }
+            });
+            const label = document.createElement("label");
+            const contentLabel = `${task.contentLabel} - ${task.title} - ${
+              task.periodo.split(" - ")[1]
+            }`;
+            label.htmlFor = contentLabel;
+            label.appendChild(document.createTextNode(contentLabel));
+            taskItem.appendChild(checkbox);
+            taskItem.appendChild(label);
+            sortedTasksList.appendChild(taskItem);
+          }
+        });
       }
 
       function generateCards(data) {
@@ -67,7 +106,12 @@
           course.task.forEach((task) => {
             if (isDateValid(task.periodo)) {
               const taskItem = document.createElement("li");
-              taskItem.innerHTML = `<strong>${task.title}</strong><br>${task.subTitle}<br><em>${task.periodo}</em>`;
+              taskItem.innerHTML = `
+                <strong>${task.title}</strong>
+                <br>
+                ${task.subTitle}
+                <br>
+                <em>${task.periodo}</em>`;
               taskList.appendChild(taskItem);
             }
           });
@@ -77,17 +121,40 @@
         });
       }
 
-      function isDateValid(periodo) {
-        const currentDate = new Date().setHours(0, 0, 0, 0);
-
-        const endDateString = periodo.split(" - ")[1];
+      function timestanpDate(dateString) {
+        endDateString = dateString.split(" - ")[1];
         const [day, month, year] = endDateString.split("/");
         const endDate = new Date(
           parseInt(year, 10) + 2000,
           parseInt(month, 10) - 1,
           parseInt(day, 10)
         );
-        return endDate >= currentDate;
+        return endDate;
+      }
+
+      function isDateValid(periodo) {
+        const currentDate = new Date().setHours(0, 0, 0, 0);
+
+        return timestanpDate(periodo) >= currentDate;
+      }
+
+      async function enviarRequisicao({ task }) {
+        const { id } = task;
+        try {
+          const resposta = await fetch("/checked", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id }),
+          });
+          if (!resposta.ok) {
+            throw new Error("Falha ao enviar requisição para o backend");
+          }
+          console.log("Requisição enviada com sucesso:", task.title);
+        } catch (erro) {
+          console.error("Erro ao enviar requisição para o backend:", erro);
+        }
       }
 
       carregarDados();
