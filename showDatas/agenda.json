@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Engenharia de Software",
+    "task": [
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw3 - Engenharia de Software",
+        "id": "3534129e-bf3d-49b1-85dc-9a20cd50ba9b",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Engenharia de Software",
+        "id": "fd982e4d-0531-4474-b7e1-e2ab157e7b6f",
+        "periodo": "19/02/24 - 15/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Engenharia de Software",
+        "id": "851d30e4-71f2-4609-8594-d23baa61085d",
+        "periodo": "04/06/24 - 08/06/25",
+        "done": false
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Engenharia de Software",
+        "id": "a44793c1-2549-44a6-985c-4237c95188fb",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Engenharia de Software",
+        "id": "ddd66930-3ad0-4641-ba23-521ab8acbd57",
+        "periodo": "19/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Algoritmos e Programação Estruturada",
+    "task": [
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw4 - Algoritmos e Programação Estruturada",
+        "id": "3d9adec7-d7c9-49b2-ba4c-022887413a9d",
+        "periodo": "19/02/24 - 15/06/25",
+        "done": false
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Algoritmos e Programação Estruturada",
+        "id": "8c733a63-f6ff-4263-a136-d0e86f97dab7",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Algoritmos e Programação Estruturada",
+        "id": "f9a55bde-393d-472e-8507-a812241808b1",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Algoritmos e Programação Estruturada",
+        "id": "63023c70-0eee-4c57-8df3-7e0b49e7268a",
+        "periodo": "03/06/24 - 08/06/25",
+        "done": false
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Algoritmos e Programação Estruturada",
+        "id": "6ae6bf18-5722-46fd-a877-03a51c690473",
+        "periodo": "10/06/24 - 15/06/24"
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Algoritmos e Programação Estruturada",
+        "id": "13c9f232-b0fa-4087-a213-2ee82d656eae",
+        "periodo": "19/02/25 - 15/06/25",
+        "done": false
+      }
+    ]
+  },
+  {
+    "name": "Lógica Computacional",
+    "task": [
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - 2º Chamada - Lógica Computacional",
+        "id": "3f8350b0-8531-4601-8813-f697bc655fa0",
+        "periodo": "03/06/24 - 08/06/24"
+      },
+      {
+        "title": "Prova Presencial da Disciplina",
+        "subTitle": "Prova Presencial - Recuperação - Lógica Computacional",
+        "id": "aaf41448-e057-411e-b330-acdfdda39458",
+        "periodo": "10/06/25 - 15/06/25",
+        "done": false
+      },
+      {
+        "title": "Engajamento AVA",
+        "subTitle": "Eng Ava1 - Lógica Computacional",
+        "id": "482a2af2-1943-4456-b548-7d5494844970",
+        "periodo": "19/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Projeto de Extensão I",
+    "task": [
+      {
+        "title": "Teleaula",
+        "subTitle": "Ta1 - Projeto de Extensão I - Engenharia de Software",
+        "id": "cd7fc548-8f90-4865-8a43-f6d2bdc28850",
+        "periodo": "05/02/24 - 05/02/24"
+      },
+      {
+        "title": "Leitura",
+        "subTitle": "Leitura1 - Projeto de Extensão I - Engenharia de Software",
+        "id": "a87fec8e-3c48-4bf6-a00c-8714a151501f",
+        "periodo": "05/02/24 - 15/06/24"
+      }
+    ]
+  },
+  {
+    "name": "Programação Web",
+    "task": [
+      {
+        "title": "Conteúdo WEB",
+        "subTitle": "Cw1 - Programação Web",
+        "id": "a92c2276-4003-42f5-900c-8e87893cee22",
+        "periodo": "05/02/24 - 15/06/24"
+      },
+      {
+        "title": "Live",
+        "subTitle": "Live",
+        "id": "559a599a-5748-4395-995b-828cdc5c5ed7",
+        "periodo": "09/05/24 - 09/05/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 1 - Programação Web",
+        "id": "a367f57f-923c-4287-baaa-6554a1b6eaba",
+        "periodo": "04/06/24 - 08/06/24"
+      },
+      {
+        "title": "Avaliação Virtual",
+        "subTitle": "Av - Subst. 2 - Programação Web",
+        "id": "a51baebe-bd9a-42f8-a2d9-dd939d939d82",
+        "periodo": "04/06/24 - 08/06/24"
+      }
+    ]
+  }
+]

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda UNOPAR</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>🗓️</text></svg>"
+    />
+    <style>
+      html {
+        background-color: #011627 !important;
+      }
+
+      body {
+        color: #e0e0e0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin: 1em 0;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      .task-list {
+        padding: 1.5em;
+        border: 1px solid #1d2b4f;
+        border-radius: 0.5em;
+        margin-bottom: 1.5em;
+      }
+
+      li {
+        font-size: 1.1em;
+        margin-bottom: 0.2em;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 0.8em;
+        border-radius: 0.5em;
+        transition: background-color 0.3s;
+        position: relative;
+      }
+
+      li:hover {
+        background-color: #1d2b4f;
+      }
+
+      li input[type="checkbox"] {
+        margin-right: 0.5em;
+        cursor: pointer;
+      }
+
+      .completed {
+        color: #0f0;
+      }
+
+      .completed::after {
+        content: 'Concluído';
+        color: #0f0;
+        font-size: 0.9em;
+        margin-left: 0.5em;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 1.5em;
+        padding: 1.5em;
+      }
+
+      .card {
+        background-color: #1d2b4f;
+        padding: 1.5em;
+        border-radius: 0.5em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h2 {
+        margin-top: 0;
+        font-size: 1.8em;
+      }
+
+      .schedule-container-wrapper {
+        padding: 1.5em;
+        border: 1px solid #1d2b4f;
+        border-radius: 0.5em;
+        margin-bottom: 1.5em;
+      }
+
+      .schedule-container-wrapper h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      .schedule-container-wrapper ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      .schedule-container-wrapper li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+        background-color: #1d2b4f;
+        border-radius: 0.5em;
+        margin-bottom: 1em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+          padding: 1em;
+        }
+
+        .task-list {
+          padding: 1em;
+          margin-bottom: 1em;
+        }
+
+        li {
+          font-size: 1em;
+          padding: 0.5em;
+        }
+
+        .card {
+          padding: 1em;
+        }
+
+        .card h2 {
+          font-size: 1.6em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cronograma UNOPAR</h1>
+
+    <div class="task-list">
+      <h2>Tarefas Futuras</h2>
+      <ol id="futureTasks"></ol>
+    </div>
+    <div class="task-list">
+      <h2>Tarefas Atuais</h2>
+      <ol id="currentTasks"></ol>
+    </div>
+    <div class="task-list">
+      <h2>Tarefas Passadas</h2>
+      <ol id="pastTasks"></ol>
+    </div>
+
+    <div class="schedule-container-wrapper">
+      <h2>Cronograma</h2>
+      <div class="container" id="scheduleContainer"></div>
+    </div>
+
+    <script>
+      function clearTaskLists() {
+        document.getElementById("futureTasks").innerHTML = "";
+        document.getElementById("currentTasks").innerHTML = "";
+        document.getElementById("pastTasks").innerHTML = "";
+        document.getElementById("scheduleContainer").innerHTML = "";
+      }
+    
+      async function carregarDados() {
+        try {
+          const resposta = await fetch(`/data`);
+          const data = await resposta.json();
+          processTasks(data);
+          generateCards(data);
+        } catch (erro) {
+          console.error("Falha ao carregar os dados da rota /data", erro);
+        }
+      }
+    
+      function processTasks(data) {
+        const futureTasksList = document.getElementById("futureTasks");
+        const currentTasksList = document.getElementById("currentTasks");
+        const pastTasksList = document.getElementById("pastTasks");
+    
+        const flatTasks = data.flatMap((v) =>
+          v.task.map((j) => ({ ...j, contentLabel: v.name, courseId: v.id }))
+        );
+        const futureTasks = flatTasks.filter((task) =>
+          isFutureDate(task.periodo)
+        );
+        const currentTasks = flatTasks.filter((task) =>
+          isCurrentDate(task.periodo)
+        );
+        const pastTasks = flatTasks.filter((task) => isPastDate(task.periodo));
+    
+        appendTasksToList(futureTasks, futureTasksList, true);
+        appendTasksToList(currentTasks, currentTasksList);
+        appendTasksToList(pastTasks, pastTasksList, false, true);
+      }
+    
+      function appendTasksToList(
+        tasks,
+        listElement,
+        isFuture = false,
+        isPast = false
+      ) {
+        tasks.sort(
+          (a, b) =>
+            new Date(startDate(a.periodo)) - new Date(startDate(b.periodo))
+        );
+        tasks.forEach((task) => {
+          const taskItem = document.createElement("li");
+          const datePart = isFuture
+            ? task.periodo.split(" - ")[0]
+            : isPast
+            ? task.periodo.split(" - ")[1]
+            : task.periodo;
+          const contentLabel = `${task.contentLabel} - ${task.title} - ${datePart}`;
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.checked = task.done || false;
+          const statusTag = document.createElement("span");
+          statusTag.textContent = task.done ? "Concluído" : "";
+          statusTag.style.color = "green";
+          statusTag.style.marginLeft = "10px";
+    
+          checkbox.addEventListener("change", (event) => {
+            enviarRequisicao(task, event.target.checked);
+          });
+          taskItem.appendChild(checkbox);
+          taskItem.appendChild(document.createTextNode(contentLabel));
+          taskItem.appendChild(statusTag);
+    
+          taskItem.addEventListener("click", (event) => {
+            if (event.target !== checkbox) {
+              checkbox.checked = !checkbox.checked;
+              enviarRequisicao(task, checkbox.checked);
+            }
+          });
+    
+          listElement.appendChild(taskItem);
+        });
+      }
+    
+      function generateCards(data) {
+        const container = document.getElementById("scheduleContainer");
+        container.innerHTML = "";
+    
+        data.forEach((course) => {
+          const courseDiv = document.createElement("div");
+          courseDiv.classList.add("card");
+    
+          const title = document.createElement("h2");
+          title.textContent = course.name;
+          courseDiv.appendChild(title);
+    
+          const taskList = document.createElement("ul");
+          course.task.forEach((task) => {
+            if (isCurrentDate(task.periodo)) {
+              const taskItem = document.createElement("li");
+              taskItem.innerHTML = `
+              <strong>${task.title}</strong>
+              <br>
+              ${task.subTitle}
+              <br>
+              <em>${task.periodo}</em>`;
+              taskList.appendChild(taskItem);
+            }
+          });
+          courseDiv.appendChild(taskList);
+    
+          container.appendChild(courseDiv);
+        });
+      }
+    
+      function startDate(dateString) {
+        const [day, month, year] = dateString.split(" - ")[0].split("/");
+        return new Date(
+          parseInt(year, 10) + 2000,
+          parseInt(month, 10) - 1,
+          parseInt(day, 10)
+        );
+      }
+    
+      function endDate(dateString) {
+        const [day, month, year] = dateString.split(" - ")[1].split("/");
+        return new Date(
+          parseInt(year, 10) + 2000,
+          parseInt(month, 10) - 1,
+          parseInt(day, 10)
+        );
+      }
+    
+      function isFutureDate(periodo) {
+        const currentDate = new Date().setHours(0, 0, 0, 0);
+        return startDate(periodo) > currentDate;
+      }
+    
+      function isCurrentDate(periodo) {
+        const currentDate = new Date().setHours(0, 0, 0, 0);
+        return (
+          startDate(periodo) <= currentDate && endDate(periodo) >= currentDate
+        );
+      }
+    
+      function isPastDate(periodo) {
+        const currentDate = new Date().setHours(0, 0, 0, 0);
+        return endDate(periodo) < currentDate;
+      }
+    
+      async function enviarRequisicao(task, done) {
+        const { id } = task;
+        try {
+          const resposta = await fetch("/checked", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id, done }),
+          });
+          if (!resposta.ok) {
+            throw new Error("Falha ao enviar requisição para o backend");
+          }
+
+          clearTaskLists();
+          carregarDados();
+        } catch (erro) {
+          console.error("Erro ao enviar requisição para o backend:", erro);
+        }
+      }
+    
+      carregarDados();
+    </script>
+  </body>
+</html>
