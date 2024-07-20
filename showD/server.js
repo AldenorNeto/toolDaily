@@ -6,12 +6,12 @@ const PORT = 5550;
 app.use(express.json());
 app.use(express.static("."));
 
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/data", (req, res) => {
-  fs.readFile("./agenda.json", "utf8", (err, data) => {
+app.get("/data", (_, res) => {
+  fs.readFile("./showD/agenda.json", "utf8", (err, data) => {
     if (err) {
       console.error("Erro ao ler o arquivo JSON:", err);
       return res.status(500).json({ error: "Erro ao ler o arquivo JSON" });
@@ -23,7 +23,7 @@ app.get("/data", (req, res) => {
 app.post("/checked", (req, res) => {
   const { id, done } = req.body;
 
-  fs.readFile("./agenda.json", "utf8", (err, data) => {
+  fs.readFile("./showD/agenda.json", "utf8", (err, data) => {
     if (err) {
       console.error("Erro ao ler o arquivo JSON:", err);
       return res.status(500).json({ error: "Erro ao ler o arquivo JSON" });
@@ -40,7 +40,7 @@ app.post("/checked", (req, res) => {
     }
 
     fs.writeFile(
-      "./agenda.json",
+      "./showD/agenda.json",
       JSON.stringify(agenda, null, 2),
       "utf8",
       (err) => {

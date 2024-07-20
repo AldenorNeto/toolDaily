@@ -4,6 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "generate": "node ./generateD/assenbleJson.js",
+    "dev": "node ./showD/server.js",
     "start": "pm2 start server.js",
     "stop": "pm2 stop server.js",
     "delete": "pm2 delete server.js"
