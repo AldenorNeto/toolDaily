@@ -6,9 +6,9 @@
   "scripts": {
     "generate": "node ./generateD/assenbleJson.js",
     "dev": "node ./showD/server.js",
-    "start": "pm2 start server.js",
-    "stop": "pm2 stop server.js",
-    "delete": "pm2 delete server.js"
+    "start": "pm2 start ./showD/server.js",
+    "stop": "pm2 stop ./showD/server.js",
+    "delete": "pm2 delete ./showD/server.js"
   },
   "keywords": [],
   "author": "",
