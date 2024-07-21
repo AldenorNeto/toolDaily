@@ -1,0 +1,160 @@
+
+html {
+  background-color: #011627 !important;
+}
+
+body {
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 1em 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.task-list {
+  padding: 1.5em;
+  border: 1px solid #1d2b4f;
+  border-radius: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+li {
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+li:hover {
+  background-color: #1d2b4f;
+}
+
+li input[type="checkbox"] {
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+.completed {
+  color: #0f0;
+}
+
+.completed::after {
+  content: "Concluído";
+  color: #0f0;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5em;
+  padding: 1.5em;
+}
+
+.card {
+  background-color: #1d2b4f;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+.schedule-container-wrapper {
+  padding: 1.5em;
+  border: 1px solid #1d2b4f;
+  border-radius: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.schedule-container-wrapper h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.schedule-container-wrapper ul {
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-container-wrapper li {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  background-color: #1d2b4f;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.download-button {
+  background-color: #1d2b4f;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  margin-left: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #2a3a6e;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    padding: 1em;
+  }
+
+  .task-list {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  li {
+    font-size: 1em;
+    padding: 0.5em;
+  }
+
+  .card {
+    padding: 1em;
+  }
+
+  .card h2 {
+    font-size: 1.6em;
+  }
+
+  h1 {
+    flex-direction: column;
+  }
+
+  .download-button {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+}
