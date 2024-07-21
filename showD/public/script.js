@@ -178,4 +178,34 @@ async function enviarRequisicao(task, done) {
   }
 }
 
+function createScheduleHTML() {
+  const body = document.body;
+
+  const h1 = document.createElement('h1');
+  h1.innerHTML = `Cronograma UNOPAR <button class="download-button" onclick="downloadPage()">Baixar Página</button>`;
+
+  const futureTasksDiv = document.createElement('div');
+  futureTasksDiv.className = 'task-list';
+  futureTasksDiv.innerHTML = '<h2>Tarefas Futuras</h2><ol id="futureTasks"></ol>';
+
+  const currentTasksDiv = document.createElement('div');
+  currentTasksDiv.className = 'task-list';
+  currentTasksDiv.innerHTML = '<h2>Tarefas Atuais</h2><ol id="currentTasks"></ol>';
+
+  const pastTasksDiv = document.createElement('div');
+  pastTasksDiv.className = 'task-list';
+  pastTasksDiv.innerHTML = '<h2>Tarefas Passadas</h2><ol id="pastTasks"></ol>';
+
+  const scheduleWrapperDiv = document.createElement('div');
+  scheduleWrapperDiv.className = 'schedule-container-wrapper';
+  scheduleWrapperDiv.innerHTML = '<h2>Cronograma</h2><div class="container" id="scheduleContainer"></div>';
+
+  body.appendChild(h1);
+  body.appendChild(futureTasksDiv);
+  body.appendChild(currentTasksDiv);
+  body.appendChild(pastTasksDiv);
+  body.appendChild(scheduleWrapperDiv);
+}
+
+createScheduleHTML();
 carregarDados();

@@ -22,31 +22,6 @@ app.get("/", (_, res) => {
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <h1>
-      Cronograma UNOPAR
-      <button class="download-button" onclick="downloadPage()">
-        Baixar Página
-      </button>
-    </h1>
-
-    <div class="task-list">
-      <h2>Tarefas Futuras</h2>
-      <ol id="futureTasks"></ol>
-    </div>
-    <div class="task-list">
-      <h2>Tarefas Atuais</h2>
-      <ol id="currentTasks"></ol>
-    </div>
-    <div class="task-list">
-      <h2>Tarefas Passadas</h2>
-      <ol id="pastTasks"></ol>
-    </div>
-
-    <div class="schedule-container-wrapper">
-      <h2>Cronograma</h2>
-      <div class="container" id="scheduleContainer"></div>
-    </div>
-
     <script src="/script.js"></script>
   </body>
 </html>
