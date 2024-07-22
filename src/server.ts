@@ -28,7 +28,7 @@ app.get("/", (_, res: Response) => {
 });
 
 app.get("/data", (_, res: Response) => {
-  fs.readFile("./showD/agenda.json", "utf8", (err, data) => {
+  fs.readFile("./src/agenda.json", "utf8", (err, data) => {
     if (err) {
       console.error("Erro ao ler o arquivo JSON:", err);
       return res.status(500).json({ error: "Erro ao ler o arquivo JSON" });
@@ -41,7 +41,7 @@ app.get("/data", (_, res: Response) => {
 app.post("/checked", (req: Request, res: Response) => {
   const { id, done } = req.body as { id: number; done: boolean };
 
-  fs.readFile("./showD/agenda.json", "utf8", (err, data) => {
+  fs.readFile("./src/agenda.json", "utf8", (err, data) => {
     if (err) {
       console.error("Erro ao ler o arquivo JSON:", err);
       return res.status(500).json({ error: "Erro ao ler o arquivo JSON" });
@@ -58,7 +58,7 @@ app.post("/checked", (req: Request, res: Response) => {
     }
 
     fs.writeFile(
-      "./showD/agenda.json",
+      "./src/agenda.json",
       JSON.stringify(agenda, null, 2),
       "utf8",
       (err) => {

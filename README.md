@@ -5,10 +5,10 @@ Este projeto é uma aplicação para gerar e visualizar um cronograma de estudos
 ## Estrutura do Projeto
 
 ```lua
-|-- generateD/
+|-- gen/
   |-- indices
   |-- assenbleJson.js
-|-- showD/
+|-- src/
   |-- agenda.json
   |-- index.html
   |-- server.js
@@ -19,13 +19,13 @@ Este projeto é uma aplicação para gerar e visualizar um cronograma de estudos
 
 ### Descrição das Pastas e Arquivos
 
-- `generateD/`: Contém scripts para gerar o arquivo JSON a partir dos arquivos HTML salvos.
-    - `indices/`: Pasta onde os arquivos HTML das matérias devem ser salvos.
-    - `assenbleJson.js`: Script que gera o arquivo `agenda.json` a partir dos arquivos HTML.
-- `showD/`: Contém a aplicação que serve o cronograma gerado.
-    - `agenda.json`: Arquivo JSON gerado que contém os dados das matérias.
-    - `index.html`: Página principal da aplicação.
-    - `server.js`: Servidor Express que serve a página `index.html` na porta 5550.
+- `gen/`: Contém scripts para gerar o arquivo JSON a partir dos arquivos HTML salvos.
+  - `indices/`: Pasta onde os arquivos HTML das matérias devem ser salvos.
+  - `assenbleJson.js`: Script que gera o arquivo `agenda.json` a partir dos arquivos HTML.
+- `src/`: Contém a aplicação que serve o cronograma gerado.
+  - `agenda.json`: Arquivo JSON gerado que contém os dados das matérias.
+  - `index.html`: Página principal da aplicação.
+  - `server.js`: Servidor Express que serve a página `index.html` na porta 5550.
 - `.gitignore`: Arquivo que especifica quais arquivos e pastas devem ser ignorados pelo Git.
 - `package-lock.json`: Arquivo gerado automaticamente para gerenciar as dependências do projeto.
 - `package.json`: Arquivo de configuração do projeto, que inclui scripts e dependências.
@@ -33,18 +33,17 @@ Este projeto é uma aplicação para gerar e visualizar um cronograma de estudos
 ## Configuração do Ambiente
 
 1. **Clone o repositório:**
-    
-    ```bash
-    git clone <URL_DO_REPOSITORIO>
-    cd cronograma-de-estudos
-    ```
-    
+
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd cronograma-de-estudos
+   ```
+
 2. **Instale as dependências:**
-    
-    ```bash
-    npm install
-    ```
-    
+
+   ```bash
+   npm install
+   ```
 
 ## Instruções de Uso
 
@@ -58,26 +57,24 @@ Este projeto é uma aplicação para gerar e visualizar um cronograma de estudos
 Após ter salvo todos os arquivos HTML:
 
 1. Execute o seguinte comando para gerar o arquivo `agenda.json`:
-    
-    ```bash
-    npm run generate
-    ```
-    
-    Este comando executa o script `assenbleJson.js` que processa os arquivos HTML e gera o arquivo JSON necessário.
-    
+
+   ```bash
+   npm run generate
+   ```
+
+   Este comando executa o script `assenbleJson.js` que processa os arquivos HTML e gera o arquivo JSON necessário.
 
 ### Iniciando o Servidor
 
 Para iniciar a aplicação e visualizar o cronograma gerado:
 
 1. Execute o seguinte comando para iniciar o servidor na porta 5550:
-    
-    ```bash
-    npm run start
-    ```
-    
-    O servidor estará disponível em http://localhost:5550.
-    
+
+   ```bash
+   npm run start
+   ```
+
+   O servidor estará disponível em http://localhost:5550.
 
 ### Scripts Disponíveis
 

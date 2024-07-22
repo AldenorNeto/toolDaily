@@ -4,11 +4,11 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "gen": "npx ts-node-dev generateD/assenbleJson.ts",
-    "dev": "npx ts-node-dev showD/server.ts",
-    "start": "pm2 start ./showD/server.js",
-    "stop": "pm2 stop ./showD/server.js",
-    "delete": "pm2 delete ./showD/server.js"
+    "gen": "npx ts-node-dev gen/assenbleJson.ts",
+    "dev": "npx ts-node-dev src/server.ts",
+    "start": "pm2 start --interpreter ts-node ./src/server.ts",
+    "stop": "pm2 stop ./src/server.ts",
+    "delete": "pm2 delete ./src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +18,8 @@
     "@types/node": "^20.14.11",
     "express": "^4.19.2",
     "jsdom": "^24.1.1",
-    "pm2": "^5.3.1",
+    "pm2": "^5.4.2",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.3",
     "uuid": "^9.0.1"

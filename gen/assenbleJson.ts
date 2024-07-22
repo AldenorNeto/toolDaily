@@ -4,7 +4,7 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 
 const inputDir = path.join(__dirname, "indices");
-const outputFile = path.join(__dirname, "../showD/agenda.json");
+const outputFile = path.join(__dirname, "../src/agenda.json");
 
 interface Task {
   title: string;
@@ -110,4 +110,16 @@ fs.readdir(inputDir, async (err, files) => {
     }
     console.log("Arquivo processado e salvo com sucesso!");
   });
+});
+
+fs.access(outputFile, fs.constants.F_OK, (err) => {
+  if (err) {
+    fs.writeFile(outputFile, "[]", (writeErr) => {
+      if (writeErr) {
+        console.error("Erro ao criar o arquivo agenda.json:", writeErr);
+        return;
+      }
+      console.log("Arquivo agenda.json criado com sucesso!");
+    });
+  }
 });
