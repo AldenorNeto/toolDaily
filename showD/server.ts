@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import fs from "fs";
 import path from "path";
+import { createScheduleHTML } from "../utils/createScheduleHTML";
 
 const app = express();
 const PORT = 5550;
@@ -22,24 +23,7 @@ interface Course {
 type Agenda = Course[];
 
 app.get("/", (_, res: Response) => {
-  const htmlContent = `
-  <!DOCTYPE html>
-  <html lang="pt-br">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Agenda UNOPAR</title>
-      <link
-        rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>🗓️</text></svg>"
-      />
-      <link rel="stylesheet" href="/styles.css">
-    </head>
-    <body>
-      <script src="/script.js"></script>
-    </body>
-  </html>
-  `;
+  const htmlContent = createScheduleHTML();
   res.send(htmlContent);
 });
 
