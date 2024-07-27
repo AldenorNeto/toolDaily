@@ -1,7 +1,15 @@
-import { JSDOM } from "jsdom";
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const JSDOM = require("jsdom");
+const app = express();
+const PORT = 5550;
 
-export function createScheduleHTML(): string {
-  const dom = new JSDOM(
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
+
+function createScheduleHTML() {
+  const dom = new JSDOM.JSDOM(
     `<!DOCTYPE html><html lang="pt-br"><head></head><body></body></html>`
   );
   const document = dom.window.document;
@@ -68,3 +76,58 @@ export function createScheduleHTML(): string {
 
   return dom.serialize();
 }
+
+app.get("/", (_, res) => {
+  const htmlContent = createScheduleHTML();
+  res.send(htmlContent);
+});
+
+app.get("/data", (_, res) => {
+  fs.readFile("./src/agenda.json", "utf8", (err, data) => {
+    if (err) {
+      console.error("Erro ao ler o arquivo JSON:", err);
+      return res.status(500).json({ error: "Erro ao ler o arquivo JSON" });
+    }
+    res.json(JSON.parse(data));
+  });
+});
+
+app.post("/checked", (req, res) => {
+  const { id, done } = req.body;
+
+  fs.readFile("./src/agenda.json", "utf8", (err, data) => {
+    if (err) {
+      console.error("Erro ao ler o arquivo JSON:", err);
+      return res.status(500).json({ error: "Erro ao ler o arquivo JSON" });
+    }
+
+    const agenda = JSON.parse(data);
+
+    for (let course of agenda) {
+      for (let task of course.task) {
+        if (task.id === id) {
+          task.done = done;
+        }
+      }
+    }
+
+    fs.writeFile(
+      "./src/agenda.json",
+      JSON.stringify(agenda, null, 2),
+      "utf8",
+      (err) => {
+        if (err) {
+          console.error("Erro ao escrever no arquivo JSON:", err);
+          return res
+            .status(500)
+            .json({ error: "Erro ao escrever no arquivo JSON" });
+        }
+        res.json(agenda);
+      }
+    );
+  });
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`http://localhost:${PORT}/`);
+});

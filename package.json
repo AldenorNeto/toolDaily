@@ -6,9 +6,9 @@
   "scripts": {
     "gen": "npx ts-node-dev gen/assenbleJson.ts",
     "dev": "npx ts-node-dev src/server.ts",
-    "start": "pm2 start --interpreter ts-node ./src/server.ts",
-    "stop": "pm2 stop ./src/server.ts",
-    "delete": "pm2 delete ./src/server.ts"
+    "start": "pm2 start ./src/server.js",
+    "stop": "pm2 stop ./src/server.js",
+    "delete": "pm2 delete ./src/server.js"
   },
   "keywords": [],
   "author": "",
