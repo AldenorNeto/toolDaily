@@ -5,7 +5,7 @@ function downloadPage() {
   const a = document.createElement("a");
   const getTimeSlice = String(new Date().getTime()).slice(0, 10);
   a.href = url;
-  a.download = `CronoUNOPAR${getTimeSlice}.html`;
+  a.download = `Crono${getTimeSlice}.html`;
   a.click();
   URL.revokeObjectURL(url);
 }

@@ -25,7 +25,7 @@ function createScheduleHTML() {
   head.appendChild(metaViewport);
 
   const title = document.createElement("title");
-  title.textContent = "Agenda UNOPAR";
+  title.textContent = "Agenda";
   head.appendChild(title);
 
   const linkIcon = document.createElement("link");
@@ -44,7 +44,7 @@ function createScheduleHTML() {
   const body = document.body;
 
   const h1 = document.createElement("h1");
-  h1.innerHTML = `Cronograma UNOPAR <button class="download-button" onclick="downloadPage()">Baixar Página</button>`;
+  h1.innerHTML = `Cronograma <button class="download-button" onclick="downloadPage()">Baixar Página</button>`;
   body.appendChild(h1);
 
   const futureTasksDiv = document.createElement("div");

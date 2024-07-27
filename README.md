@@ -2,93 +2,52 @@
 
 Este projeto é uma aplicação para gerar e visualizar um cronograma de estudos a partir de arquivos HTML salvos de páginas de matérias. O projeto usa Node.js e inclui scripts para gerar um arquivo JSON a partir dos arquivos HTML e para iniciar um servidor para visualizar o cronograma gerado.
 
-## Estrutura do Projeto
+## Instalação
 
-```lua
-|-- gen/
-  |-- indices
-  |-- assenbleJson.js
-|-- src/
-  |-- agenda.json
-  |-- index.html
-  |-- server.js
-|-- .gitignore
-|-- package-lock.json
-|-- package.json
-```
+1. Clone este repositório para o seu diretório local;
+2. Navegue até o diretório do projeto;
+3. Instale as dependências do projeto:
+    
+    ```bash
+    npm install
+    ```
+    
 
-### Descrição das Pastas e Arquivos
+## Como Usar
 
-- `gen/`: Contém scripts para gerar o arquivo JSON a partir dos arquivos HTML salvos.
-  - `indices/`: Pasta onde os arquivos HTML das matérias devem ser salvos.
-  - `assenbleJson.js`: Script que gera o arquivo `agenda.json` a partir dos arquivos HTML.
-- `src/`: Contém a aplicação que serve o cronograma gerado.
-  - `agenda.json`: Arquivo JSON gerado que contém os dados das matérias.
-  - `index.html`: Página principal da aplicação.
-  - `server.js`: Servidor Express que serve a página `index.html` na porta 5550.
-- `.gitignore`: Arquivo que especifica quais arquivos e pastas devem ser ignorados pelo Git.
-- `package-lock.json`: Arquivo gerado automaticamente para gerenciar as dependências do projeto.
-- `package.json`: Arquivo de configuração do projeto, que inclui scripts e dependências.
+### Passo 1: Salvar Páginas
 
-## Configuração do Ambiente
+Para mapear as atividades de suas matérias, siga os passos abaixo:
 
-1. **Clone o repositório:**
+1. Abra a página web da matéria que deseja mapear em seu navegador.
+   <div><img src="https://github.com/user-attachments/assets/4ba472b8-d988-41ec-86ac-4be3938d61a1"/><div/>
+2. Pressione **Ctrl + S** ou **Cmd + S** (no macOS) para salvar a página.
+3. Escolha o diretório `gen/indices` dentro do repositório que você clonou.
+   <div><img src="https://github.com/user-attachments/assets/536cfb27-52b0-497b-bafc-7a0e51cf41c7"/><div/>
+  
+4. Salve a página web com o nome correspondente à matéria. **Repita este passo para cada matéria** que deseja incluir no cronograma.
 
-   ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd cronograma-de-estudos
-   ```
+### Passo 2: Gerar JSON
 
-2. **Instale as dependências:**
+Depois de salvar as páginas desejadas, você precisa gerar o arquivo JSON que a aplicação utilizará:
 
-   ```bash
-   npm install
-   ```
+1. Execute o seguinte comando no terminal para gerar os arquivos JSON:
+    
+    ```bash
+    npm run gen
+    ```
+    
+    Este comando processará todas as páginas salvas e criará um arquivo JSON com as informações organizadas.
+    
 
-## Instruções de Uso
+### Passo 3: Iniciar Aplicação
 
-### Salvando Páginas HTML
+Por fim, inicie a aplicação para visualizar o cronograma:
 
-1. Acesse os sites das matérias que deseja incluir no cronograma.
-2. Para cada matéria, salve a página HTML pressionando `Ctrl + S` e salve o arquivo na pasta `generateD/indices`.
-
-### Gerando o Arquivo JSON
-
-Após ter salvo todos os arquivos HTML:
-
-1. Execute o seguinte comando para gerar o arquivo `agenda.json`:
-
-   ```bash
-   npm run generate
-   ```
-
-   Este comando executa o script `assenbleJson.js` que processa os arquivos HTML e gera o arquivo JSON necessário.
-
-### Iniciando o Servidor
-
-Para iniciar a aplicação e visualizar o cronograma gerado:
-
-1. Execute o seguinte comando para iniciar o servidor na porta 5550:
-
-   ```bash
-   npm run start
-   ```
-
-   O servidor estará disponível em http://localhost:5550.
-
-### Scripts Disponíveis
-
-- `npm run generate`: Gera o arquivo `agenda.json` a partir dos arquivos HTML na pasta `indices`.
-- `npm run dev`: Inicia o servidor em modo de desenvolvimento.
-- `npm run start`: Inicia o servidor usando PM2 para gerenciamento de processos.
-- `npm run stop`: Para o servidor PM2.
-- `npm run delete`: Remove o servidor PM2.
-
-## Dependências
-
-O projeto utiliza as seguintes dependências:
-
-- `express`: Framework para criar o servidor web.
-- `jsdom`: Biblioteca para manipulação de arquivos HTML.
-- `pm2`: Gerenciador de processos para aplicações Node.js.
-- `uuid`: Biblioteca para geração de identificadores únicos.
+1. Execute o comando abaixo no terminal:
+    
+    ```bash
+    npm run start
+    ```
+    
+2. Abra o navegador e acesse http://localhost:5550 para visualizar o cronograma com as informações de suas matérias.
