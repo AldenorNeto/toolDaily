@@ -5,10 +5,7 @@
   "main": "script.js",
   "scripts": {
     "gen": "npx ts-node-dev gen/assenbleJson.ts",
-    "dev": "npx ts-node-dev src/server.ts",
-    "start": "pm2 start ./src/server.js",
-    "stop": "pm2 stop ./src/server.js",
-    "delete": "pm2 delete ./src/server.js"
+    "start": "node ./src/server.js"
   },
   "keywords": [],
   "author": "",

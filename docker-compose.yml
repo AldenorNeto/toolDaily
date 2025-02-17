@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  tooldaily:
+    build:
+      context: .
+    ports:
+      - "5550:5550"
+    restart: always
